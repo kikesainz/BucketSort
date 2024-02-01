@@ -10,11 +10,8 @@ public class BucketSort {
 
     // Función principal para Bucket Sort
     public static void bucketSort(double[] arr) {
-        int n = arr.length;
+        int n = 10;
 
-        if (n <= 0) {
-            return; // No se puede ordenar un array vacío
-        }
 
         // 1. Crear una matriz de casilleros (buckets) 
         // Cada elemento del arrayList buckets tendrá un arrayList
@@ -25,7 +22,7 @@ public class BucketSort {
         }
 
         // 2. Asignar elementos a los casilleros
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int bucketIndex = (int) (n * arr[i]);
             buckets[bucketIndex].add(arr[i]);
         }
